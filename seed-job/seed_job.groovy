@@ -8,14 +8,14 @@ System.getProperties().put("proxyPort", "8080"); //TODO generate from env
 
 ignoredRepos = ["toto"]
 
-next = repositoryJob("https://api.github.com/mbretaud/repos")
+next = repositoryJob("https://api.github.com/orgs/Mathieu-Bretaud/repos")
 while(next != null) {
     next = repositoryJob(next)
 }
 
 def repositoryJob(reposUrl){
     def reposApi = new URL(reposUrl)
-    def token = "34e023c7ee867359dab5ee078f355658cff3d274"
+    def token = "${DATASCIENCE_GIT_TOKEN}"
 
     def conn = reposApi.openConnection()
     conn.setRequestProperty("Authorization", "token ${token}")
@@ -24,6 +24,7 @@ def repositoryJob(reposUrl){
     def repos = new groovy.json.JsonSlurper().parseText(conn.content.text)
 
     println("reposUrl ${reposUrl}")
+    println("token: ${token}")
 
     return nextPage(conn);
 }
