@@ -37,7 +37,6 @@ def repositoryJob(reposUrl){
                 nextPr = createJobPr(repo, nextPr, true, contentsUrl, gitUrl, token)
             }
 
-
             println("${project} on branches")
             nextBr = createJobBranch(repo, "https://api.github.com/repos/${project}/branches", false, contentsUrl, gitUrl, token)
             while(nextBr != null) {
