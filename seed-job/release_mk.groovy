@@ -11,7 +11,7 @@ job(jobName) {
         }
         stringParameterDefinition {
             name("GIT_BRANCH")
-            defaultValue("staging")
+            defaultValue("develop")
             description("Git branch to release.")
         }
         choiceParam('RELEASE_TYPE', ['Stable', 'M', 'RC'], 'Stable release \nMilestone  \nRelease Candidate')
@@ -47,7 +47,7 @@ job(jobName) {
                 '\n' +
                 'echo 0.0.1 > version.mk' +
                 '\n' +
-                '/usr/bin/git branch --set-upstream ${GIT_BRANCH} origin/${GIT_BRANCH}\n' +
+                '/usr/bin/git branch --set-upstream-to ${GIT_BRANCH} origin/${GIT_BRANCH}\n' +
                 '\n' +
                 'export ACTUAL_VERSION=`grep \'BUILD_VERSION=\' version.mk | sed \'s/BUILD_VERSION=//\'`\n' +
                 'RELEASE_VERSION_COMPUTED=`echo $ACTUAL_VERSION | sed \'s/-SNAPSHOT//\'`\n' +
