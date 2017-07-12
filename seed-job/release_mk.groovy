@@ -46,7 +46,9 @@ job(jobName) {
                 '\n' +
                 '/usr/bin/git checkout ${GIT_BRANCH}\n' +
                 '\n' +
-                '/usr/bin/git branch --set-upstream ${GIT_BRANCH} origin/${GIT_BRANCH}\n' +
+                'echo 0.0.1 > version.mk' +
+                '\n' +
+                '/usr/bin/git branch --set-upstream-to ${GIT_BRANCH} origin/${GIT_BRANCH}\n' +
                 '\n' +
                 'export ACTUAL_VERSION=`grep \'BUILD_VERSION=\' version.mk | sed \'s/BUILD_VERSION=//\'`\n' +
                 'RELEASE_VERSION_COMPUTED=`echo $ACTUAL_VERSION | sed \'s/-SNAPSHOT//\'`\n' +
