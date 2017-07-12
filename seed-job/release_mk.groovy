@@ -1,6 +1,6 @@
 def jobName = "ADMIN-release-mk"
 
-def gitUrl = 'git@github.com:Carrefour-Group/$GIT_PROJECT.git'
+def gitUrl = 'git@github.com:Mathieu-Bretaud/$GIT_PROJECT.git'
 
 job(jobName) {
     parameters {
