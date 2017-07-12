@@ -23,7 +23,6 @@ job(jobName) {
         daysToKeep(3)
         numToKeep(3)
     }
-    label('slave')
     scm {
         git {
             remote {
