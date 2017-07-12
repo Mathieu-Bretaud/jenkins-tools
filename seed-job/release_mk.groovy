@@ -11,7 +11,7 @@ job(jobName) {
         }
         stringParameterDefinition {
             name("GIT_BRANCH")
-            defaultValue("develop")
+            defaultValue("staging")
             description("Git branch to release.")
         }
         choiceParam('RELEASE_TYPE', ['Stable', 'M', 'RC'], 'Stable release \nMilestone  \nRelease Candidate')
