@@ -117,7 +117,4 @@ job(jobName) {
                 '\n' +
                 '/usr/bin/git push -uf origin $GIT_BRANCH')
     }
-    publishers {
-        mailer('Phenix_Dev@carrefour.com', false, true)
-    }
 }
