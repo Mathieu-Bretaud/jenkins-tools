@@ -52,8 +52,6 @@ job(jobName) {
                 'export NEXT_VERSION=0.0.2\n' +
                 'export RELEASE_VERSION=0.0.2\n' +
                 '\n' +
-                '/usr/bin/git commit -am "prepare for release $RELEASE_VERSION"\n' +
-                '\n' +
                 'export TAG_VERSION="v$RELEASE_VERSION"\n' +
                 '\n' +
                 '/usr/bin/git tag $TAG_VERSION\n' +
