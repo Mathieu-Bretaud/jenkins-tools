@@ -45,7 +45,7 @@ job(jobName) {
                 '\n' +
                 '/usr/bin/git checkout ${GIT_BRANCH}\n' +
                 '\n' +
-                'echo 0.0.1 > version.mk' +
+                'echo \'BUILD_VERSION=0.0.1\' > version.mk' +
                 '\n' +
                 '/usr/bin/git branch --set-upstream-to ${GIT_BRANCH} origin/${GIT_BRANCH}\n' +
                 '\n' +
