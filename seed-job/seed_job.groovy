@@ -164,6 +164,7 @@ def createJob(repo, contentsUrl, branchName, isAPr, htmlLink, gitUrl, token) {
                 environmentVariables {
                     loadFilesFromMaster(true)
                     env('GIT_BRANCH', branchName)
+                    env('GIT_BRANCH_TO_PUSH', 'staging')
                     env('isApr', isAPr)
                     env('PR_LINK', htmlLink)
                     env('REPO', repo)
