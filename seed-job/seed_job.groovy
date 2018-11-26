@@ -3,7 +3,7 @@ import java.io.*;
 
 /* PROXY SETTINGS */
 System.getProperties().put("proxySet", "true");
-System.getProperties().put("proxyHost", "10.54.64.5"); //TODO generate from env
+System.getProperties().put("proxyHost", "*******"); //TODO generate from env
 System.getProperties().put("proxyPort", "8080"); //TODO generate from env
 
 ignoredRepos = ["toto"]
